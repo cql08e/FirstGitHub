@@ -1,2 +1,3 @@
 netstat -n | awk '/^tcp/{++S[$NF]} END {for(a in S) print a,S[a]}'
 awk '$1 ~ /aaa/{sum=0;for(i=2;i<=NF;i++) sum=int(sum+$i);print sum}'
+watch cat /proc/net/dev
